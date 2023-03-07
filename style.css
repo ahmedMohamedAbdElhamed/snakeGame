@@ -1,0 +1,87 @@
+* {
+    font-family: 'Cairo', sans-serif, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #00ADB5;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    width: 65vmin;
+    height: 80vmin;
+    background-color: #222831;
+    border-radius: 10px;
+}
+
+.scoreBoard {
+    color: #eeeeee;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#play-space {
+    display: grid;
+    grid-template: repeat(30,1fr) / repeat(30,1fr);
+    height: 100%;
+    background-color: #393e46;
+    border-radius: 10px;
+}
+
+.controls {
+    display: none;
+}
+
+#food {
+    background-color: #00ADB5;
+    border: 0.5px solid #393e46;
+}
+
+#snakeHead {
+    background-color: #eeeeee;
+}
+
+#snakeBody {
+    background-color: #a8a8a8;
+}
+
+@media screen and (max-width: 800px) {
+
+    #play-space {
+        border: none;
+        border-radius: 0px;
+    }
+
+    .gameContainer {
+        width: 90vmin;
+        height: 115vmin;
+    }
+
+    .scoreBoard {
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .controls span {
+        color: #eeeeee;
+        padding: 15px 0px;
+        text-align: center;
+        cursor: pointer;
+        width: 25%;
+        border-right: 1px solid #393e46;
+    }
+}
